@@ -33,10 +33,6 @@
     "LowerFire"
   ],
   "hud": [
-    "PingColorIndicator",
     "MoreCrosshairs-4AngledDot"
-  ],
-  "gui": [
-    "NumberedHotbar"
   ]
 }
