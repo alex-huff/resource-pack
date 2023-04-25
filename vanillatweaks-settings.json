@@ -1,0 +1,42 @@
+{
+  "aesthetic": [
+    "EnderDragonElytra",
+    "RedIronGolemFlowers",
+    "SolidHoney",
+    "SolidSlime"
+  ],
+  "utility": [
+    "NoteblockBanners",
+    "VisualCauldronStages",
+    "VisualComposterStages",
+    "VisualHoney",
+    "GroovyLevers",
+    "RedstonePowerLevels",
+    "CleanRedstoneDust",
+    "BetterObservers",
+    "DirectionalDispensersDroppers",
+    "DirectionalHoppers",
+    "HungerPreview",
+    "StickyPistonSides",
+    "BuddingAmethystBorders"
+  ],
+  "terrain": [
+    "UniformOres",
+    "ClearerWater",
+    "BetterBedrock"
+  ],
+  "unobtrusive": [
+    "LowerShield",
+    "CleanerWorldBorder",
+    "TransparentSpyglassOverlay",
+    "TransparentPumpkin",
+    "LowerFire"
+  ],
+  "hud": [
+    "PingColorIndicator",
+    "MoreCrosshairs-4AngledDot"
+  ],
+  "gui": [
+    "NumberedHotbar"
+  ]
+}

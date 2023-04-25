@@ -1,0 +1,6 @@
+[submodule "Awesome-Skies"]
+	path = Awesome-Skies
+	url = https://github.com/heymanMC/Awesome-Skies
+[submodule "Default-Dark-Mode"]
+	path = Default-Dark-Mode
+	url = https://github.com/nebuIr/Default-Dark-Mode
