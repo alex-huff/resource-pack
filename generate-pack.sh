@@ -33,7 +33,7 @@ if [ "$#" -gt 0 ]; then
 	echo "Configuring font..."
 	FONT_DIR="temp-dir/assets/minecraft/font"
 	FONT_CONFIG_PATH="$FONT_DIR/default.json"
-	FONT_PATH="$FONT_DIR/font.ttf"
+	FONT_PATH="$FONT_DIR/font"
 	cp "$1" $FONT_PATH
 	jq --ascii-output ".providers += [$(cat font-conf.json)]" $FONT_CONFIG_PATH > "${FONT_CONFIG_PATH}.temp"
 	mv "${FONT_CONFIG_PATH}.temp" $FONT_CONFIG_PATH
