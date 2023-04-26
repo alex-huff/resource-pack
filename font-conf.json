@@ -1,0 +1,10 @@
+{
+  "type": "ttf",
+  "file": "minecraft:font.ttf",
+  "shift": [
+    0,
+    0
+  ],
+  "size": 12,
+  "oversample": 10
+}
