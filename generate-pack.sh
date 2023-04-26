@@ -21,7 +21,7 @@ DOWNLOAD_PATH=$(curl \
 PACK_LINK="${VANILLATWEAKS_BASE_URL}$DOWNLOAD_PATH"
 PACK_NAME="vanillatweaks.zip"
 wget -O $PACK_NAME $PACK_LINK > /dev/null 2>&1
-printf "N\n" | unzip $PACK_NAME -d temp-dir
+unzip -n $PACK_NAME -d temp-dir
 rm $PACK_NAME
 
 # Awesome Skies merge
@@ -31,16 +31,20 @@ cp -Rn Awesome-Skies/assets temp-dir
 # font configuration
 if [ "$#" -gt 0 ]; then
 	echo "Configuring font..."
-	FONT_PATH="temp-dir/assets/minecraft/font/default.json"
-	cp "$1" temp-dir/assets/minecraft/font/font.ttf
-	jq --ascii-output ".providers += [$(cat font-conf.json)]" $FONT_PATH > "${FONT_PATH}.temp"
-	mv "${FONT_PATH}.temp" $FONT_PATH
+	FONT_DIR="temp-dir/assets/minecraft/font"
+	FONT_CONFIG_PATH="$FONT_DIR/default.json"
+	FONT_PATH="$FONT_DIR/font.ttf"
+	cp "$1" $FONT_PATH
+	jq --ascii-output ".providers += [$(cat font-conf.json)]" $FONT_CONFIG_PATH > "${FONT_CONFIG_PATH}.temp"
+	mv "${FONT_CONFIG_PATH}.temp" $FONT_CONFIG_PATH
 fi
 
 # finalization
-echo "Finalizing..."
+echo "Zipping..."
 cp pack.mcmeta temp-dir
 cd temp-dir
 zip -r ../pack.zip ./*
 cd ..
 rm -Rf temp-dir
+
+echo "Done."
