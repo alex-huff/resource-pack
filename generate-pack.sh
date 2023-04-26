@@ -6,6 +6,7 @@ cp -R Default-Dark-Mode/assets temp-dir
 cp Default-Dark-Mode/pack.png temp-dir
 
 # augmenting dark mode color
+echo "Augmenting dark mode colors..."
 python color-augmentation/palettize.py temp-dir
 
 # download vanillatweaks configuration and merge it with texture pack
