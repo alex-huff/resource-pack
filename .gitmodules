@@ -4,3 +4,4 @@
 [submodule "Default-Dark-Mode"]
 	path = Default-Dark-Mode
 	url = https://github.com/nebuIr/Default-Dark-Mode
+	branch = 1.20
